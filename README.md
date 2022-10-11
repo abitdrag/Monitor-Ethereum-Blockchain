@@ -5,7 +5,7 @@ Onchain data is taken from Etherscan. Since we need many requests on Etherscan.c
 
 # How to use
 1. **Fill config.config for Telegram API**. The messages will be forwarded to this Telegram account.      
-2. Generate fake cookies to avoid getting Captcha   
+2. Generate multiple cookies to avoid getting Captcha   
     - Create x number of Etherscan accounts and login to them to get cookies. Store the login details and Cookies in *etherscan_cookies.py* file. In the file two examples shows how you need to add cookies. To get the proper values, do this in Firefox.   
     - Each time you login, one SID will be created. You can find SID in header. Store those SID separately in file *etherscan_sids.py*   
     - The file *firefoxdata.py* uses these data to generate headers and cookies for requests.   
@@ -21,5 +21,5 @@ Onchain data is taken from Etherscan. Since we need many requests on Etherscan.c
 5. Put your etherscan key in *settings.ini* file   
 6. Change your log file from *settings.ini* file. The file *logger.py* handles logs.   
 
-The headers and proxies are important to make huge number of requests on many accounts. They will be used in *monitor.py* to generate requests. The forwarding of messages on Telegram is handled by *telegram_messenger.py* file. If you can afford to purchase many proxies then you can avoid using fake cookies. 
+The headers and proxies are important to make huge number of requests on many accounts. They will be used in *monitor.py* to generate requests. The forwarding of messages on Telegram is handled by *telegram_messenger.py* file. If you can afford to purchase many proxies then you can avoid using multiple cookies. 
 
